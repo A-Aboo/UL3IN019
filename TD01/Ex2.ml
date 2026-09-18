@@ -24,10 +24,10 @@ let premier_sup (n : int ) : int =
     check n;;
 
 let rec premier_pos (n : int) : int =
-    if premier n then premier_sup 0 
-    else 
+    
+     
         let rec check (i : int) (j : int) : int = 
             if j = n then i 
-            else premier_sup(i) 
+            else check  (premier_sup (i + 1))  (j+1)
         in 
     check 2 0 ;;
