@@ -13,3 +13,21 @@ let premier (n : int) : bool =
             else check (i +1)
             in
     check 2
+
+let premier_sup (n : int ) : int =
+    if premier n then n 
+    else 
+        let rec check i = 
+            if premier(i) then i 
+            else check ( i  +1 ) 
+        in
+    check n;;
+
+let rec premier_pos (n : int) : int =
+    if premier n then premier_sup 0 
+    else 
+        let rec check (i : int) (j : int) : int = 
+            if j = n then i 
+            else premier_sup(i) 
+        in 
+    check 2 0 ;;
