@@ -33,12 +33,11 @@ The repository will be updated progressively as I complete new **TDs and TMEs**.
 
 ## Repository Content
 
-For the moment, I have completed only the first TME.
 
 | TME / TD | Status |
 |---|---|
 | TME 1 | ✅ Completed |
-| Next TD / TME | ⏳ To be added |
+| Next TD / TME | ⏳   |
 
 ---
 
