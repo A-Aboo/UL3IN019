@@ -26,7 +26,7 @@ let rec etendre (l1 : 'a list) (l2 : 'a list) (n : 'a) : 'a list =
   | [] , [] -> []
   | [] , _ :: t2 -> 
       n :: etendre [] t2 n
-  | _::_ , [] -> failwith "Ahh shit !"
+  | _::_ , [] -> failwith "Errororor"
   | h1 :: t1 , h2 :: t2 ->
     if h1 = h2 then 
       h1 :: etendre t1 t2 n
