@@ -37,8 +37,8 @@ For the moment, I have completed only the first TME.
 
 | TME / TD | Status |
 |---|---|
-| TME 1 | ✅ Completed |
-| Next TD / TME | ⏳ To be added |
+| TME 1 | ✅ |
+| Next TD / TME | ⏳  |
 
 ---
 
