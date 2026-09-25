@@ -2,7 +2,7 @@ let rec verifie ( lst  : ( int *  int )   list) : bool =
     match lst with
     | [] -> true 
     | [_] -> true  (*list with exactly one element*)
-    | (a,b) :: (c,d) :: t -> (c+d > a+b) && verifie ((c,d) :: t) (* a,b and c,d are the first and two element of the list t is the tail the rest of the list *)
+    | (a,b) :: (c,d) :: t -> (a+b <= c) && verifie ((c,d) :: t) (* a,b and c,d are the first and two element of the list t is the tail the rest of the list *)
 
 let rec alloue (n : int ) (lst : ( int * int ) list) :  (int * int) list =
     match lst with
@@ -16,7 +16,7 @@ let rec alloue (n : int ) (lst : ( int * int ) list) :  (int * int) list =
 
 let rec libere (addr : int ) (size : int) (lst : (int * int )  list) : (int*int)  list =
     match lst with
-    | [] -> []
+    | [] -> [(addr, size)]
     | (a,b) :: t -> 
         if addr + size = a then
             (addr, size  +b ) :: t
@@ -55,37 +55,4 @@ let defragmente_right (lst : (int * int) list) : (int * int) list =
                     (a, b) :: acc)
         lst
         []
-
-
-let films =
-[("Le comte de Monte Cristo", [("Delaporte","Matthieu");("De LaPatelliere","Alexandre")],2024,[("Niney","Pierre");("Bouillon","Bastien");("Demoustier","Anais")])
-;
-("Le Temps D’Aimer", [("Quillevere","Katell")],2023,[("Demoustier","Anais");("Lacoste","Vincent");("Beaurepaire","Paul")]);
-
-("Yves Saint-Laurent", [("Lespert","Jalil")],2014,[("Niney","Pierre");("Gallienne","Guillaume");("LeBon","Charlotte")]);
-
-("Falcon Lake", [("Le Bon","Charlotte")],2022,[("Engel","Joseph");("Montpetit","Sara");("Chokri","Monia")]);
-
-("Un p’tit truc en plus", [("Artus","")],2024,[("Artus", "");("Cornillac","CLovis");("Belaide","Alice")]);
-]
-
-type t_film = (string * (string * string) list * int * (string * string) list) list
-
-let list_titres (film : t_film) : string list = 
-    List.map (fun (x , _ , _ , _) -> x) film
-
-let filme_annee (film : t_film) (n : int): string list =
-    list_titres (   List.filter (  fun (_ , _ , x ,  _ ) -> x =  n) film   )
-
-
-let filme_annee2 (film : t_film ) (n : int) : string list =
-    List.fold_left   (
-
-        fun acc (titre , _ , annee , _ ) -> 
-            if annee = n then
-                acc @ [titre]
-            else 
-                acc
-
-    ) [] film
 
