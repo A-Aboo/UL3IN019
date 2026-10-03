@@ -37,8 +37,10 @@ For the moment, I have completed only the first TME.
 
 | TME / TD | Status |
 |---|---|
-| TME 1 | ✅ |
-| Next TD / TME | ⏳  |
+| TD/TME 1 | ✅ |
+| TD/TME 2 | ✅ |
+| TD/TME 3 | ✅ |
+| TD/TME 4 | ⏳ | 
 
 ---
 
