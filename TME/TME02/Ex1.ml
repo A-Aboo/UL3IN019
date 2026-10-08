@@ -26,7 +26,7 @@ let rec etendre (l1 : 'a list) (l2 : 'a list) (n : 'a) : 'a list =
   | [] , [] -> []
   | [] , _ :: t2 -> 
       n :: etendre [] t2 n
-  | _::_ , [] -> failwith "Ahh shit !!! "
+  | _::_ , [] -> failwith "AHH SHIT HERE WE GO AGAIN !!! "
   | h1 :: t1 , h2 :: t2 ->
     if h1 = h2 then 
       h1 :: etendre t1 t2 n
@@ -37,8 +37,8 @@ let rec etendre (l1 : 'a list) (l2 : 'a list) (n : 'a) : 'a list =
 let rec helper (l1 : 'a list) ( l2 : 'a list) (n : 'a) : 'a list =
   match l1 , l2 with 
   | [], [] -> []
-  | [] , _::_ -> failwith "Errorrrer"
-  | _::_ , [] -> failwith "Errorrere"
+  | [] , _::_ -> failwith "Bro cooked... and burned the whole kitchen.!!! "
+  | _::_ , [] -> failwith "Skill issue detected.!!! "
   | h1 :: t1 , h2 :: t2 -> 
     if h1 = h2 then 
       h1 :: helper t1 t2 n
@@ -47,7 +47,7 @@ let rec helper (l1 : 'a list) ( l2 : 'a list) (n : 'a) : 'a list =
     else if h2 = n then   
         h1 :: helper t1 t2 n
     else 
-      failwith "unmatched numbers "
+      failwith "Bro really sent it and prayed."
 
 let rec fusion_lists (lxt : 'a list list ) (n : 'a) : 'a list =
   match lxt with 
