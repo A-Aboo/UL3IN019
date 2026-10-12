@@ -13,6 +13,7 @@ type valeur =
   | Roi
   | As
   | More
+  | Encore
 
 type couleur =
   | Coeur
