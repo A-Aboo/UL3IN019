@@ -13,7 +13,8 @@ type valeur =
   | Roi
   | As
   | More
-
+  | Less
+  
 type couleur =
   | Coeur
   | Carreau
