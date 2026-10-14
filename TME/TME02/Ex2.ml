@@ -67,3 +67,18 @@ let map_paire (a : 'a) ( l : 'b list ) : ('a * 'b) list =
     List.map ( fun x -> (a,x) ) l 
 
 
+let liste_compat2 (p1 : prog) (p2 : prog ) : (sceance * sceance) list =
+  List.fold_left (
+    fun acc x ->
+      List.fold_left (
+        fun acc2 y ->
+          if seances_compat x y then (x,y) :: acc2
+          else acc2
+      )acc p2 
+      
+  ) [] p1 
+
+let seances_possibles t1 t2 p =
+  let l1 = liste_seances t1 p in
+  let l2 = liste_seances t2 p in
+  liste_compat2 l1 l2
