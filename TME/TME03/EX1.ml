@@ -12,8 +12,6 @@ type valeur =
   | Dame
   | Roi
   | As
-  | More
-  | Encore
 
 type couleur =
   | Coeur
