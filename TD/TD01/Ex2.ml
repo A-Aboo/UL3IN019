@@ -31,3 +31,4 @@ let rec premier_pos (n : int) : int =
             else check  (premier_sup (i + 1))  (j+1)
         in 
     check 2 0 ;;
+    
