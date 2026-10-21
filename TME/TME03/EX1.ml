@@ -15,6 +15,8 @@ type valeur =
   | More
   | Less
   
+  | Encore
+
 type couleur =
   | Coeur
   | Carreau
