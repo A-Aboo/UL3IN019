@@ -12,10 +12,7 @@ type valeur =
   | Dame
   | Roi
   | As
-  | More
-  | Less
-  
-  | Encore
+
 
 type couleur =
   | Coeur
