@@ -40,7 +40,8 @@ The repository will be updated progressively as I complete new **TDs and TMEs**.
 | TD/TME 2 | ✅ |
 | TD/TME 3 | ✅ |
 | TD/TME 4 | ✅ | 
-| TD/TME 5 | ⏳ | 
+| TD/TME 5 | ✅ | 
+| TD/TME 6 | ⏳ | 
 
 ---
 
