@@ -33,11 +33,10 @@ let rec etendre (l1 : 'a list) (l2 : 'a list) (n : 'a) : 'a list =
     else 
       n :: etendre l1 t2 n
 
-
 let rec helper (l1 : 'a list) ( l2 : 'a list) (n : 'a) : 'a list =
   match l1 , l2 with 
   | [], [] -> []
-  | [] , _::_ -> failwith "Bro cooked... and burned the whole kitchen.!!! "
+  | [] , _::_ -> failwith "Skill issue detected.!!!"
   | _::_ , [] -> failwith "Skill issue detected.!!! "
   | h1 :: t1 , h2 :: t2 -> 
     if h1 = h2 then 
