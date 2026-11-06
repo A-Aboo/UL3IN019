@@ -9,7 +9,6 @@ let rec lacunaire (l1 : 'a list) ( l2 : 'a list) : bool =
         lacunaire t1 t2
       else 
         lacunaire (h1::t1) (t2)
-
 let rec sous_adj (l1 : 'a list ) ( l2 : 'a list) (n : 'a)  : bool =
     match l1 , l2 with
     | [] , []  -> true
